@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Youtube API</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Youtube logo -->
+        <div class="yt_logo">
+            <svg class="defs">
+                <symbol id="youtube" fill="red">
+                    <path
+                        d="M27.671,0.419c-7.286-0.49-15.924-0.624-23.344,0C2.023,0.677,0.445,3.481,0.273,5.611c-0.364,4.474-0.364,7.02,0,11.494c0.174,2.13,1.712,4.95,4.056,5.246c7.508,0.492,16.102,0.56,23.344,0c2.268-0.394,3.882-3.116,4.056-5.246
+                c0.364-4.474,0.364-7.298,0-11.774C31.553,3.201,30.281,0.515,27.671,0.419z M11.999,17.033V5.563l10,5.736L11.999,17.033z" />
+                </symbol>
+            </svg>
+            <svg class="icon icon-youtube1">
+                <use xlink:href="#youtube" />
+            </svg>
+            <h2 id="yt">Youtube</h2>
+        </div>
+
+        <!-- Profiel + Afmelden-->
+        <div class="dropdown">
+            <p id="dropdownMenuButton" data-toggle="dropdown">
+                <svg class="bi bi-person-circle profile dropdown-toggle" viewBox="0 0 16 16" width="2em" height="2em"
+                    fill="grey" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+                    <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd"
+                        d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+                </svg>
+                <svg class="bi bi-caret-down-fill" width="0.5em" height="0.5em" viewBox="0 0 16 16" fill="grey"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                </svg>
+            </p>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="index.html">
+                    <svg class="bi bi-box-arrow-left" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.354 11.354a.5.5 0 0 0 0-.708L1.707 8l2.647-2.646a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708 0z" />
+                        <path fill-rule="evenodd" d="M11.5 8a.5.5 0 0 0-.5-.5H2a.5.5 0 0 0 0 1h9a.5.5 0 0 0 .5-.5z" />
+                        <path fill-rule="evenodd"
+                            d="M14 13.5a1.5 1.5 0 0 0 1.5-1.5V4A1.5 1.5 0 0 0 14 2.5H7A1.5 1.5 0 0 0 5.5 4v1.5a.5.5 0 0 0 1 0V4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5H7a.5.5 0 0 1-.5-.5v-1.5a.5.5 0 0 0-1 0V12A1.5 1.5 0 0 0 7 13.5h7z" />
+                    </svg> Afmelden</a>
+            </div>
+        </div>
+
+        <!-- Video's opzoeken -->
+        <form class="input-group mb-3" action="#">
+            <input type="text" class="form-control" id="search" placeholder="Zoeken" style="border-radius: 40px 0 0 40px;">
+            <button class="search" type="submit">
+                <yt-icon class="style-scope ytd-searchbox">
+                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                        focusable="false" class="style-scope yt-icon"
+                        style="pointer-events: none; display: block; width: 100%; height: 25px">
+                        <g class="style-scope yt-icon">
+                            <path
+                                d="M20.87,20.17l-5.59-5.59C16.35,13.35,17,11.75,17,10c0-3.87-3.13-7-7-7s-7,3.13-7,7s3.13,7,7,7c1.75,0,3.35-0.65,4.58-1.71 l5.59,5.59L20.87,20.17z M10,16c-3.31,0-6-2.69-6-6s2.69-6,6-6s6,2.69,6,6S13.31,16,10,16z"
+                                class="style-scope yt-icon"></path>
+                        </g>
+                    </svg>
+                </yt-icon>
+            </button>
+        </form>
+
+        <!-- Video's laten zien -->
+        <div id="results"></div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
